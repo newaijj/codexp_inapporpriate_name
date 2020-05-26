@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(MyApp());
 }
-
+//this is test comment
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      _counter = _counter + 1;
     });
   }
 

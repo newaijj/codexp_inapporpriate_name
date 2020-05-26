@@ -4,6 +4,7 @@ void main() {
   runApp(MyApp());
 }
 //this is test comment (2nd edit)
+//this is something stupid
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override

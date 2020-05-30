@@ -55,6 +55,13 @@ class _AnimationPageState extends State<AnimationPage> {
         curve: Interval(0.0, 0.67, curve: Curves.fastOutSlowIn),
       ),
     );
+
+    imageOpacity = Tween(begin: 0.0, end: 1.0).animate(
+        CurvedAnimation(
+          parent: controller,
+          curve: Interval(0.0, 0.67, curve: Curves.easeIn),
+        ),
+      );
     
   }
 
@@ -75,9 +82,11 @@ class _AnimationPageState extends State<AnimationPage> {
               Expanded(
                 child: FractionalTranslation(
                   translation: imageTranslation.value,
-                  child: FitText(text:"text 1"),
+                  child: FadeTransition(
+                    opacity: imageOpacity,
+                    child: FitText(text:"text 1"),
                 ),
-              ),
+              ),),
               Expanded(
                 flex: 2,
                 child: FitText(text:"text 1"),

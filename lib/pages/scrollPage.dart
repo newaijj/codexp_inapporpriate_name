@@ -24,9 +24,9 @@ class _ScrollPageState extends State<ScrollPage> {
       scrollProgress = controller.offset;
     });
   }
-  
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
         appBar: new AppBar(
           title: Row(
@@ -35,8 +35,8 @@ class _ScrollPageState extends State<ScrollPage> {
                 text: "text",
               ),
               Container(
-                width: scrollProgress,
                 height: 35,
+                width: scrollProgress* screenWidth*0.002 ,
                 color: Colors.red,
               ),
             ]

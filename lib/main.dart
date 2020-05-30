@@ -34,6 +34,7 @@ class _AppState extends State<App> {
       routes: {
         "/": (context) => ScrollPage(),
         "/about": (context) => AboutPage(),
+        "/userInput": (context) => FormPage(),
       },
     );
   }

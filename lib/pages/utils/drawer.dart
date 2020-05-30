@@ -33,6 +33,13 @@ class MyDrawer extends StatelessWidget {
             Navigator.pushNamed(context, "/animation");
           }
         ),
+        new ListTile(
+          title: new Text('User Input Demo'),
+          onTap: (){
+            Navigator.pop(context);
+            Navigator.pushNamed(context, "/userInput");
+          }
+        ),
       ],),
     );
   }

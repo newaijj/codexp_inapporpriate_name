@@ -25,7 +25,14 @@ class MyDrawer extends StatelessWidget {
             Navigator.pop(context);
             Navigator.pushNamed(context, "/about");
           }
-        )
+        ),
+        new ListTile(
+          title: new Text('Animation Demo'),
+          onTap: (){
+            Navigator.pop(context);
+            Navigator.pushNamed(context, "/animation");
+          }
+        ),
       ],),
     );
   }

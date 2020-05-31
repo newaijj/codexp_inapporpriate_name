@@ -1,5 +1,6 @@
 import 'utils/all.dart';
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 enum Orientation {
   horizontal,
@@ -50,14 +51,14 @@ class MondrianPage extends StatelessWidget {
 
 
   MondrianStruct _genStructure (int dep){
-    if(dep==0){
+    if(dep<=0){
       return null;
     }
     var struc = MondrianStruct(
-      ratio: 0.5,
-      orientation: Orientation.horizontal,
-      first: _genStructure(dep-1),
-      second: _genStructure(dep-1),
+      ratio: 0.1+0.8*Random().nextDouble(),
+      orientation: Orientation.values[Random().nextInt(2)],
+      first: _genStructure( dep-1-Random().nextInt(2)),
+      second: _genStructure( dep-1-Random().nextInt(2)),
     );
     return struc;
   }
@@ -90,7 +91,7 @@ class MondrianPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    var _struc = _genStructure(int.parse('2'));
+    var _struc = _genStructure(int.parse('4'));
     var _mondrianWidg = _genMondrianLayout(_struc);
 
     return Scaffold(

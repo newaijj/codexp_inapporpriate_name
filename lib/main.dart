@@ -13,13 +13,14 @@ class App extends StatefulWidget {
   }
 }
 
+
 class _AppState extends State<App> {
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: "/",
+      initialRoute: "/mondrian",
       
       onGenerateRoute: (RouteSettings settings){
         Route page;
@@ -32,9 +33,10 @@ class _AppState extends State<App> {
       },
       
       routes: {
-        "/": (context) => ScrollPage(),
+        "/scroll": (context) => ScrollPage(),
         "/about": (context) => AboutPage(),
         "/userInput": (context) => FormPage(),
+        "/mondrian": (context) => MondrianPage(),
       },
     );
   }

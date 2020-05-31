@@ -13,10 +13,10 @@ class MyDrawer extends StatelessWidget {
           ),
         ),
         new ListTile(
-          title: new Text('Home'),
+          title: new Text('Scroll'),
           onTap: (){
             Navigator.pop(context);
-            Navigator.pushNamed(context, "/");
+            Navigator.pushNamed(context, "/scroll");
           }
         ),
         new ListTile(
@@ -38,6 +38,13 @@ class MyDrawer extends StatelessWidget {
           onTap: (){
             Navigator.pop(context);
             Navigator.pushNamed(context, "/userInput");
+          }
+        ),
+        new ListTile(
+          title: new Text('Mondrian Demo'),
+          onTap: (){
+            Navigator.pop(context);
+            Navigator.pushNamed(context, "/mondrian");
           }
         ),
       ],),
